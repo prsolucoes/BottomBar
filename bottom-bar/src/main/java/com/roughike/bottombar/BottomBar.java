@@ -424,12 +424,7 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
 
         if (totalSizePX < viewWidthPX) {
             int offset = (viewWidthPX - totalSizePX) / tabsWithoutFixedSize;
-
-            for (BottomBarTab tabView : tabsToAdd) {
-                if (!tabView.hasFixedWidth()) {
-                    proposedItemWidth += offset;
-                }
-            }
+            proposedItemWidth += offset;
         }
 
         // setup tabs
